@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo> 
+	 	<data noupdate="1"> 
+	 	 	<record id="cliente120" model="upobebe.cliente"> 
+	 	 	 	<field name="name">Carmela</field> 
+	 	 	 	<field name="apellidos">Torres Bilbao</field> 
+	 	 	 	<field name="dni">80764529T</field> 
+	 	 	 	<field name="numero">600980765</field> 
+	 	 	 	<field name="direccion">Avenida Alhambra, 23, 4D</field> 
+	 	 	 	<field name="correo">cartorbil@gmail.com</field> 
+	 	 	 	<field name="cp">40980</field> 
+	 	 	</record> 	
+	 	 	<record id="cliente121" model="upobebe.cliente"> 
+	 	 	 	<field name="name">Juan Pablo</field> 
+	 	 	 	<field name="apellidos">Arias Figueroa</field> 
+	 	 	 	<field name="dni">45609078K</field> 
+	 	 	 	<field name="numero">701987659</field> 
+	 	 	 	<field name="direccion">Calle Madrid, 5, 1B</field> 
+	 	 	 	<field name="correo">juanpabloar@gmail.es</field> 
+	 	 	 	<field name="cp">47908</field> 
+	 	 	</record> 	 	 	
+	 	 	<record id="cliente122" model="upobebe.cliente"> 
+	 	 	 	<field name="name">Rosa</field> 
+	 	 	 	<field name="apellidos">Gallego Campuzano</field> 
+	 	 	 	<field name="dni">21906590C</field> 
+	 	 	 	<field name="numero">697250190</field> 
+	 	 	 	<field name="direccion">Calle Central, 13, 2A</field> 
+	 	 	 	<field name="correo">rosgalcamp@yahoo.com</field> 
+	 	 	 	<field name="cp">44560</field> 
+	 	 	</record> 	 	 
+	 	    <record id="articulo201" model="upobebe.articulo"> 
+	 	 	 	<field name="name">Pelota Sensorial Lanco Luna multicolor</field> 
+	 	 	 	<field name="precio">13.50</field> 
+	 	 	 	<field name="descripcion">Está hecha de caucho natural totalmente biodegradable y sostenible. Hecha a mano, decorada con pigmentos de calidad alimentaria y hermética siendo totalmente segura para el bebé</field> 
+	 	 	 	<field name="id">59</field> 
+	 	 	</record> 	 	 	
+	 	 	<record id="articulo202" model="upobebe.articulo"> 
+	 	 	 	<field name="name">Cuna (60 x 120 cm.) Micuna Cosmic blanco/Nordic beige</field> 
+	 	 	 	<field name="precio">304</field> 
+	 	 	 	<field name="descripcion">3 posiciones de somier para facilitar el descanso del bebé.Lateral móvil para un mejor acceso al interior de la Cuna.Incluye 4 ruedas, 2 con freno para mayor seguridad.</field> 
+	 	 	 	<field name="id">60</field> 
+	 	 	</record>  	 	
+	 	 	<record id="articulo203" model="upobebe.articulo"> 
+	 	 	 	<field name="name">Parque de viaje Jané Travel Fun Toys gris</field> 
+	 	 	 	<field name="precio">102</field> 
+	 	 	 	<field name="descripcion">Plegado de reducidas dimensiones.Incorpora ruedas para su fácil transporte y ventana con cremallera.Incluye Barra de juegos y Colchoneta de 90 x 90 cm.</field> 
+	 	 	 	<field name="id">61</field> 
+	 	 	</record> 
+	 	 	 	 	
+	  	 	<record id="venta301" model="upobebe.venta"> 
+	 	 	 	<field name="name">46</field> 
+	 	 	 	<field name="importe">13.50</field> 
+	 	 	 	<field name="fecha">15/12/2019</field> 
+	 	 	 	<field name="comentarios">Una pelota.</field> 
+	 	 	 	<field name="estado">en proceso de envio</field> 
+ 	 	 		<field name="articulo_ids" 	eval="[(6, 0, [articulo201, ])]"></field> 
+	 	 	 	<field name="cliente_id" ref="cliente120"></field> 
+	 	 	</record>
+	 	 	
+	 	 	<record id="venta302" model="upobebe.venta"> 
+	 	 	 	<field name="name">47</field> 
+	 	 	 	<field name="importe">406</field> 
+	 	 	 	<field name="fecha">08/12/2019</field> 
+	 	 	 	<field name="comentarios">Una cuna y un parque.</field> 
+	 	 	 	<field name="estado">entregado</field> 
+ 	 	 		<field name="articulo_ids" 	eval="[(6, 0, [articulo202,articulo203, ])]"></field> 
+	 	 	 	<field name="cliente_id" ref="cliente121"></field> 
+	 	 	</record> 
+	 	 	
+	 	 	<record id="venta303" model="upobebe.venta"> 
+	 	 	 	<field name="name">48</field> 
+	 	 	 	<field name="importe">304</field> 
+	 	 	 	<field name="fecha">09/12/2019</field> 
+	 	 	 	<field name="comentarios">Una cuna.</field> 
+	 	 	 	<field name="estado">entregado</field> 
+ 	 	 		<field name="articulo_ids" 	eval="[(6, 0, [articulo202, ])]"></field> 
+	 	 	 	<field name="cliente_id" ref="cliente122"></field> 
+	 	 	</record> 
+	 	 	
+	 	</data> 
+</odoo> 
